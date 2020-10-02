@@ -14,6 +14,7 @@ namespace MandlBrot
 {
     public class MandelBrotModel
     {
+        private object Locker = new object();
         /// <summary>
         /// The calculated points of the function. 
         /// </summary>
@@ -36,8 +37,6 @@ namespace MandlBrot
         {
             double xReminder = -2;
             double yReminder = 1.2;
-            double x = xReminder;
-            double y = yReminder;
 
             int maxIterations = 18;
             int maxBetrag = 4;
@@ -51,7 +50,7 @@ namespace MandlBrot
             byte[] colors = new byte[] { 0, 50,100,150,200,250};
 
 
-            for (int i = 0; i < yPixels; i++)
+            /*for (int i = 0; i < yPixels; i++)
             {
                 for (int j = 0; j < xPixels; j++)
                 {
@@ -67,8 +66,78 @@ namespace MandlBrot
 
                 x = xReminder;
                 y = y - step;
+            }*/
+
+
+            List<Task<List<(int, int, int)>>> tasks = new List<Task<List<(int, int, int)>>>();  // = Task.Factory.StartNew(new Action(()=> { this.CalcPart(0, xPixels, 0, yPixels, maxIterations, maxBetrag, xReminder, yReminder, step) }));
+
+            for (int k = 0; k < 2; k++)
+            {
+                int xMin = 0;
+                int xMax = 100;
+                double xxReminder = xReminder; 
+                if(k == 1) { xMin = 101; xMax = 200; xxReminder = xReminder + 100 * step; }
+
+                Task < List < (int, int, int) >> task = Task.Factory.StartNew(() => { return this.CalcPart(xMin, xMax, 0, yPixels, maxIterations, maxBetrag, xxReminder, yReminder, step); });
+                tasks.Add(task);
             }
 
+
+            Task.WaitAll(tasks.ToArray());
+
+            List<(int, int, int)> coordinatedValues = new List<(int, int, int)>();
+
+            for (int j = 0; j < tasks.Count; j++)
+            {
+                coordinatedValues.AddRange(tasks.ElementAt(j).Result);
+            }
+
+            //task.Result;
+
+
+            //List<(int, int, int)> coordinatedValues = this.CalcPart(0, xPixels, 0, yPixels, maxIterations, maxBetrag, xReminder, yReminder, step);
+
+            for (int i = 0; i < coordinatedValues.Count; i++)
+            {
+                int y = coordinatedValues.ElementAt(i).Item1;
+                int x = coordinatedValues.ElementAt(i).Item2;
+                int iterations = coordinatedValues.ElementAt(i).Item3;
+                int t = colors[iterations % 6];
+                this.Points.Add(new Line(new List<Point> { new Point(y, x), new Point(y + 1, x) }, new SolidColorBrush(Color.FromRgb((byte)t, 250, (byte)t))));
+            }
+
+        }
+
+        public List<(int, int, int)> CalcPart(int xMin, int xMax, int yMin, int yMax, int maxIterations, int maxBetrag, double xReminder, double yReminder, double step)
+        {
+            List<(int, int, int)> coordinatedValues = new List<(int, int, int)>();
+
+
+            double x = xReminder;
+            double y = yReminder;
+            //lock (Locker)
+            //{
+                for (int i = yMin; i < yMax; i++)
+                {
+                    for (int j = xMin; j < xMax; j++)
+                    {
+
+                        int iterations = Julia(maxIterations, x, y, maxBetrag);
+
+                        //int t = iterations * 50 % 250;
+
+                        coordinatedValues.Add((j, i, iterations));
+                        //this.Points.Add(new Line(new List<Point> { new Point(j, i), new Point(j + 1, i) }, new SolidColorBrush(Color.FromRgb((byte)t, 250, (byte)t))));
+                        x = x + step;
+                    }
+
+                    x = xReminder;
+                    y = y - step;
+                }
+           // }
+            
+
+            return coordinatedValues;
         }
 
         private int Julia(int maxIter, double real, double imag, int max_betrag)
