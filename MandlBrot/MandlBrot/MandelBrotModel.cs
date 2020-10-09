@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -9,6 +10,9 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Shapes;
+//using Newtonsoft.Json;
+//using System.Text.Json;
+//using System.Text.Json.Serialization;
 
 namespace MandlBrot
 {
@@ -70,6 +74,66 @@ namespace MandlBrot
 
 
             List<Task<List<(int, int, int)>>> tasks = new List<Task<List<(int, int, int)>>>();  // = Task.Factory.StartNew(new Action(()=> { this.CalcPart(0, xPixels, 0, yPixels, maxIterations, maxBetrag, xReminder, yReminder, step) }));
+
+
+            /*Message1 message1 = new Message1  //ein Beispiel  Message
+            {
+                coordinates = new List<(int, int)> { (1, 1), (2, 3), (5, 1) }   // wir schiken wirklich nur die koordinaten wo es schwarz sein soll, alles andre is weiß
+            };
+
+            Message2 message2 = new Message2  //ein Beispiel  Message
+            {
+                coordinates = new List<(int, int, bool)> { (1, 1, true), (2, 3, false), (5, 1, true) }  // wir schiken alle koordinaten und je nach schwarz oder weiß, true oder false
+            };
+
+            Message3 message3 = new Message3  //ein Beispiel  Message
+            {
+                coordinates = new List<(int, int, int)> { (1, 1, 6234), (2, 3, 12412), (5, 1, 897124) }  // wir schicken alle koordinaten und die jeweiligen iterationswerte
+            };*/
+
+
+
+
+            //NewtonSoft.Json.JavaScriptSerializer
+
+            Args args = new Args      //ein Beispiel arg
+            {
+                xMin = 0,
+                xMax = 100,
+                yMin = 0,
+                yMAx = 100,
+                xZoomValue = -2.0,  //optional etwa wir gebens an oda wir machen uns ein fixes aus was alle nehmen müssen
+                yZoomValue = 1.2,    //optional etwa wir gebens an oda wir machen uns ein fixes aus was alle nehmen müssen
+            };
+
+            List<(int, int)> coordinates1 = new List<(int, int)> { (1, 1), (2, 3), (5, 1) };   // wir schiken wirklich nur die koordinaten wo es schwarz sein soll, alles andre is weiß
+            (int,int)[] coordinates11 = new [] { (1, 1), (2, 3), (5, 1) };
+
+            List<(int, int, bool)> coordinates2 = new List<(int, int, bool)> { (1, 1, true), (2, 3, false), (5, 1, true) };  // wir schiken alle koordinaten und je nach schwarz oder weiß, true oder false
+            (int, int, bool)[] coordinates22 = new[] { (1, 1, true), (2, 3, false), (5, 1, true) };
+
+            List<(int, int, int)> coordinates3 = new List<(int, int, int)> { (1, 1, 6234), (2, 3, 12412), (5, 1, 897124) };  // wir schicken alle koordinaten und die jeweiligen iterationswerte
+            (int, int, int)[] coordinates33 = new[] { (1, 1, 6234), (2, 3, 12412), (5, 1, 897124) };
+
+            JsonSerializer jsonSerializer = new JsonSerializer();          //NewtonSoft.Json      NUGGET-Package
+
+            // for Loop erstelle lauter args wo man xMin xMax yMin yMax ändert, egal ob zeilenweise, spaltenweise etc
+            //{
+            string gejastonStr = JsonConvert.SerializeObject(new List<(int, int, bool)> { (1, 1, true), (2, 3, false), (5, 1, true) });
+            // etwa mit Rest schicken wir lauter POST requests und bekommen Messages zurück
+            // oder TCP machen wir mit jedem Server eine Verbindung und haben einen listener der uns dann Messages zurück gibt   (vl muss ma no byte -> string und umgekehrt konvertiern)
+            //}
+
+            // warte bisd du alle Teile hast, oda async oda egal wers wie machn will
+
+            //for Loop alle Teile
+            //{
+            List<(int, int, bool)> onePart = JsonConvert.DeserializeObject<List<(int, int, bool)>>(gejastonStr);
+            // MYPAINTER.paint(onePart)      jeder wie ers machen will
+            //}
+
+
+
 
             for (int k = 0; k < 2; k++)
             {
@@ -189,6 +253,32 @@ namespace MandlBrot
             {
                 this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
+        }
+
+       /* private class Message1
+        {
+            public List<(int, int)> coordinates { get; set; }
+        }
+
+
+        private class Message2
+        {
+            public List<(int, int, bool)> coordinates { get; set; }
+        }
+
+        private class Message3
+        {
+            public List<(int, int, int)> coordinates { get; set; }
+        }*/
+
+        private class Args
+        {
+            public int xMin { get; set; }
+            public int xMax { get; set; }
+            public int  yMin{ get; set; }
+             public int yMAx { get; set; }
+            public  double xZoomValue { get; set; } //optional etwa wir gebens an oda wir machen uns ein fixes aus
+            public double  yZoomValue { get; set; }    //optional etwa wir gebens an oda wir machen uns ein fixes aus  { get; set; }
         }
     }
 }

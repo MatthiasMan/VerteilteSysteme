@@ -32,3 +32,5 @@ C:\Matthias_Folders\Matthias_workspace\GIT_Workspace\FH_MatthiasM_VerteilteSyste
 C:\Matthias_Folders\Matthias_workspace\GIT_Workspace\FH_MatthiasM_VerteilteSysteme\MandlBrot\MandlBrot\obj\Debug\MandlBrot.csproj.CopyComplete
 C:\Matthias_Folders\Matthias_workspace\GIT_Workspace\FH_MatthiasM_VerteilteSysteme\MandlBrot\MandlBrot\obj\Debug\MandlBrot.exe
 C:\Matthias_Folders\Matthias_workspace\GIT_Workspace\FH_MatthiasM_VerteilteSysteme\MandlBrot\MandlBrot\obj\Debug\MandlBrot.pdb
+C:\Matthias_Folders\Matthias_workspace\GIT_Workspace\FH_MatthiasM_VerteilteSysteme\MandlBrot\MandlBrot\bin\Debug\Newtonsoft.Json.dll
+C:\Matthias_Folders\Matthias_workspace\GIT_Workspace\FH_MatthiasM_VerteilteSysteme\MandlBrot\MandlBrot\bin\Debug\Newtonsoft.Json.xml
