@@ -105,5 +105,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExchangeLibrary\ExchangeLibrary.csproj">
+      <Project>{c401580b-671b-414b-8f9b-9f60c99bfce2}</Project>
+      <Name>ExchangeLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

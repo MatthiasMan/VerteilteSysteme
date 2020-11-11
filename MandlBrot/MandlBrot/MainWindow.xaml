@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:MandlBrot"
         xmlns:converter="clr-namespace:MandlBrot.Converter"        
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        ContentRendered="Window_ContentRendered">
     <Window.DataContext>
         <local:MandelBrotModel>
 

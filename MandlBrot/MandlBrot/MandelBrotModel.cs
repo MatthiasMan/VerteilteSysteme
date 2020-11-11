@@ -106,8 +106,8 @@ namespace MandlBrot
                 yZoomValue = 1.2,    //optional etwa wir gebens an oda wir machen uns ein fixes aus was alle nehmen müssen
             };
 
-            List<(int, int)> coordinates1 = new List<(int, int)> { (1, 1), (2, 3), (5, 1) };   // wir schiken wirklich nur die koordinaten wo es schwarz sein soll, alles andre is weiß
-            (int,int)[] coordinates11 = new [] { (1, 1), (2, 3), (5, 1) };
+            List<(int, int)> coordinates1 = new List<(int, int)> { (1, 1), (2, 3), (5, 1) };   // wir schiken wirklich nur die koordinaten wo es schwarz sein soll, alles andre is weiß                         
+            (int,int)[] coordinates11 = new [] { (1, 1), (2, 3), (5, 1) };                                                                                                                                               
 
             List<(int, int, bool)> coordinates2 = new List<(int, int, bool)> { (1, 1, true), (2, 3, false), (5, 1, true) };  // wir schiken alle koordinaten und je nach schwarz oder weiß, true oder false
             (int, int, bool)[] coordinates22 = new[] { (1, 1, true), (2, 3, false), (5, 1, true) };
