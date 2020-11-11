@@ -1797,6 +1797,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "ExchangeLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/ExchangeLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ExchangeLibrary.dll": {}
+        }
       }
     }
   },
@@ -5985,10 +5995,16 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "ExchangeLibrary/1.0.0": {
+      "type": "project",
+      "path": "../ExchangeLibrary/ExchangeLibrary.csproj",
+      "msbuildProject": "../ExchangeLibrary/ExchangeLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "ExchangeLibrary >= 1.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.4"
     ]
   },
@@ -6021,7 +6037,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Matthias_Folders\\Matthias_workspace\\GIT_Workspace\\FH_MatthiasM_VerteilteSysteme\\MandlBrot\\ExchangeLibrary\\ExchangeLibrary.csproj": {
+              "projectPath": "C:\\Matthias_Folders\\Matthias_workspace\\GIT_Workspace\\FH_MatthiasM_VerteilteSysteme\\MandlBrot\\ExchangeLibrary\\ExchangeLibrary.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

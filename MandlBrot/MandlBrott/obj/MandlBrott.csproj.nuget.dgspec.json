@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Matthias_Folders\\Matthias_workspace\\GIT_Workspace\\FH_MatthiasM_VerteilteSysteme\\MandlBrot\\Server\\Server.csproj": {}
+    "C:\\Matthias_Folders\\Matthias_workspace\\GIT_Workspace\\FH_MatthiasM_VerteilteSysteme\\MandlBrot\\MandlBrott\\MandlBrott.csproj": {}
   },
   "projects": {
     "C:\\Matthias_Folders\\Matthias_workspace\\GIT_Workspace\\FH_MatthiasM_VerteilteSysteme\\MandlBrot\\ExchangeLibrary\\ExchangeLibrary.csproj": {
@@ -59,14 +59,14 @@
         }
       }
     },
-    "C:\\Matthias_Folders\\Matthias_workspace\\GIT_Workspace\\FH_MatthiasM_VerteilteSysteme\\MandlBrot\\Server\\Server.csproj": {
+    "C:\\Matthias_Folders\\Matthias_workspace\\GIT_Workspace\\FH_MatthiasM_VerteilteSysteme\\MandlBrot\\MandlBrott\\MandlBrott.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Matthias_Folders\\Matthias_workspace\\GIT_Workspace\\FH_MatthiasM_VerteilteSysteme\\MandlBrot\\Server\\Server.csproj",
-        "projectName": "Server",
-        "projectPath": "C:\\Matthias_Folders\\Matthias_workspace\\GIT_Workspace\\FH_MatthiasM_VerteilteSysteme\\MandlBrot\\Server\\Server.csproj",
+        "projectUniqueName": "C:\\Matthias_Folders\\Matthias_workspace\\GIT_Workspace\\FH_MatthiasM_VerteilteSysteme\\MandlBrot\\MandlBrott\\MandlBrott.csproj",
+        "projectName": "MandlBrott",
+        "projectPath": "C:\\Matthias_Folders\\Matthias_workspace\\GIT_Workspace\\FH_MatthiasM_VerteilteSysteme\\MandlBrot\\MandlBrott\\MandlBrott.csproj",
         "packagesPath": "C:\\Users\\marth\\.nuget\\packages\\",
-        "outputPath": "C:\\Matthias_Folders\\Matthias_workspace\\GIT_Workspace\\FH_MatthiasM_VerteilteSysteme\\MandlBrot\\Server\\obj\\",
+        "outputPath": "C:\\Matthias_Folders\\Matthias_workspace\\GIT_Workspace\\FH_MatthiasM_VerteilteSysteme\\MandlBrot\\MandlBrott\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -100,9 +100,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+            "Newtonsoft.Json": {
               "target": "Package",
-              "version": "[3.1.4, )"
+              "version": "[12.0.3, )"
             }
           },
           "imports": [
@@ -116,11 +116,11 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"

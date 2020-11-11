@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ExchangeLibrary;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,7 +14,7 @@ namespace Server.Controllers
         
         [HttpPost]
         [Route("ap/mandlbrot")]
-        public ActionResult ggg([FromBody] /*calcualationrequ*/)  //kalkulier ma den scheiß
+        public ActionResult ggg([FromBody]CalculationRequest calculationRequest)  //kalkulier ma den scheiß
         {
 
 
