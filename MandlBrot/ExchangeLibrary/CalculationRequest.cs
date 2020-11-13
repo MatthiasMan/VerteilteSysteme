@@ -6,13 +6,27 @@ namespace ExchangeLibrary
 {
     public class CalculationRequest
     {
-        public readonly int Height;
-        public readonly int Width;
+        /*private int height;
+        private int width;*/
+
+        public CalculationRequest()
+        {
+        }
 
         public CalculationRequest(int height, int width)
         {
             Height = height;
             Width = width;
+        }
+
+        public int Height
+        {
+            get; set;
+        }
+
+        public int Width
+        {
+            get;set;
         }
     }
 }

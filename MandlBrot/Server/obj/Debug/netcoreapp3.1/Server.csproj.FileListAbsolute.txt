@@ -86,7 +86,9 @@ C:\Matthias_Folders\Matthias_workspace\GIT_Workspace\FH_MatthiasM_VerteilteSyste
 C:\Matthias_Folders\Matthias_workspace\GIT_Workspace\FH_MatthiasM_VerteilteSysteme\MandlBrot\Server\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Matthias_Folders\Matthias_workspace\GIT_Workspace\FH_MatthiasM_VerteilteSysteme\MandlBrot\Server\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Matthias_Folders\Matthias_workspace\GIT_Workspace\FH_MatthiasM_VerteilteSysteme\MandlBrot\Server\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Matthias_Folders\Matthias_workspace\GIT_Workspace\FH_MatthiasM_VerteilteSysteme\MandlBrot\Server\obj\Debug\netcoreapp3.1\Server.MvcApplicationPartsAssemblyInfo.cache
 C:\Matthias_Folders\Matthias_workspace\GIT_Workspace\FH_MatthiasM_VerteilteSysteme\MandlBrot\Server\obj\Debug\netcoreapp3.1\Server.csproj.CopyComplete
 C:\Matthias_Folders\Matthias_workspace\GIT_Workspace\FH_MatthiasM_VerteilteSysteme\MandlBrot\Server\obj\Debug\netcoreapp3.1\Server.dll
 C:\Matthias_Folders\Matthias_workspace\GIT_Workspace\FH_MatthiasM_VerteilteSysteme\MandlBrot\Server\obj\Debug\netcoreapp3.1\Server.pdb
+C:\Matthias_Folders\Matthias_workspace\GIT_Workspace\FH_MatthiasM_VerteilteSysteme\MandlBrot\Server\bin\Debug\netcoreapp3.1\ExchangeLibrary.dll
+C:\Matthias_Folders\Matthias_workspace\GIT_Workspace\FH_MatthiasM_VerteilteSysteme\MandlBrot\Server\bin\Debug\netcoreapp3.1\ExchangeLibrary.pdb
+C:\Matthias_Folders\Matthias_workspace\GIT_Workspace\FH_MatthiasM_VerteilteSysteme\MandlBrot\Server\obj\Debug\netcoreapp3.1\Server.MvcApplicationPartsAssemblyInfo.cache
