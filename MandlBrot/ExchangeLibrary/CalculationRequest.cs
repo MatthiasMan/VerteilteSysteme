@@ -6,9 +6,6 @@ namespace ExchangeLibrary
 {
     public class CalculationRequest
     {
-        /*private int height;
-        private int width;*/
-
         public CalculationRequest()
         {
         }

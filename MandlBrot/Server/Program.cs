@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Server
 {
-    public class Program
+    public class Program                              // OBSELETE
     {
         public static void Main(string[] args)
         {

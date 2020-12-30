@@ -20,3 +20,11 @@ C:\Matthias_Folders\Matthias_workspace\GIT_Workspace\FH_MatthiasM_VerteilteSyste
 C:\Matthias_Folders\Matthias_workspace\GIT_Workspace\FH_MatthiasM_VerteilteSysteme\MandlBrot\MandlBrot\obj\Debug\netcoreapp3.1\MandlBrot.csproj.CopyComplete
 C:\Matthias_Folders\Matthias_workspace\GIT_Workspace\FH_MatthiasM_VerteilteSysteme\MandlBrot\MandlBrot\obj\Debug\netcoreapp3.1\MandlBrot.dll
 C:\Matthias_Folders\Matthias_workspace\GIT_Workspace\FH_MatthiasM_VerteilteSysteme\MandlBrot\MandlBrot\obj\Debug\netcoreapp3.1\MandlBrot.pdb
+C:\Matthias_Folders\Matthias_workspace\GIT_Workspace\FH_MatthiasM_VerteilteSysteme\MandlBrot\MandlBrot\bin\Debug\netcoreapp3.1\AsyncIO.dll
+C:\Matthias_Folders\Matthias_workspace\GIT_Workspace\FH_MatthiasM_VerteilteSysteme\MandlBrot\MandlBrot\bin\Debug\netcoreapp3.1\NaCl.dll
+C:\Matthias_Folders\Matthias_workspace\GIT_Workspace\FH_MatthiasM_VerteilteSysteme\MandlBrot\MandlBrot\bin\Debug\netcoreapp3.1\NetMQ.dll
+C:\Matthias_Folders\Matthias_workspace\GIT_Workspace\FH_MatthiasM_VerteilteSysteme\MandlBrot\MandlBrot\bin\Debug\netcoreapp3.1\System.Net.Http.WinHttpHandler.dll
+C:\Matthias_Folders\Matthias_workspace\GIT_Workspace\FH_MatthiasM_VerteilteSysteme\MandlBrot\MandlBrot\bin\Debug\netcoreapp3.1\System.ServiceModel.Primitives.dll
+C:\Matthias_Folders\Matthias_workspace\GIT_Workspace\FH_MatthiasM_VerteilteSysteme\MandlBrot\MandlBrot\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Net.Http.WinHttpHandler.dll
+C:\Matthias_Folders\Matthias_workspace\GIT_Workspace\FH_MatthiasM_VerteilteSysteme\MandlBrot\MandlBrot\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netstandard2.0\System.Private.ServiceModel.dll
+C:\Matthias_Folders\Matthias_workspace\GIT_Workspace\FH_MatthiasM_VerteilteSysteme\MandlBrot\MandlBrot\bin\Debug\netcoreapp3.1\runtimes\win7\lib\netstandard2.0\System.Private.ServiceModel.dll

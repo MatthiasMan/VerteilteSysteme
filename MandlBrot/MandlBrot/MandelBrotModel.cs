@@ -41,7 +41,6 @@ namespace MandlBrot
         {
             byte[] colors = new byte[] { 0, 50, 100, 150, 200, 250 };
 
-            //var xxx = new List<Line>();
 
             for (int i = 0; i < coordinatedvalues.Count; i++)
             {
@@ -49,11 +48,9 @@ namespace MandlBrot
 
                 int t = colors[curr.Item3 % 6];
                 this.Points.Add(new Line(new List<Point> { new Point(curr.Item2, curr.Item1), new Point(curr.Item2 + 1, curr.Item1) }, new SolidColorBrush(Color.FromRgb((byte)t, 250, (byte)t))));
-                //xxx.Add(new Line(new List<Point> { new Point(curr.Item2, curr.Item1), new Point(curr.Item2 + 1, curr.Item1) }, new SolidColorBrush(Color.FromRgb(100, 250, 200))));
-
+                
             }
 
-            //this.Points = xxx;
             this.FireOnPropertyChanged("Points");
             
         }

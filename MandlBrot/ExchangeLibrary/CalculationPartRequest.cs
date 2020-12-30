@@ -6,16 +6,6 @@ namespace ExchangeLibrary
 {
     public class CalculationPartRequest
     {
-       /* public readonly int XMin;
-        public readonly int XMax;
-        public readonly int YMin;
-        public readonly int YMax;
-        public readonly double  XCurr;
-        public readonly double XStep;
-        public readonly double YCurr;
-        public readonly double YStep;
-        public readonly int MaxIterations;
-        public readonly int MaxBetrag;*/
 
         public CalculationPartRequest(int xMin, int xMax, int yMin, int yMax, double xCurr, double xStep, double yCurr, double yStep, int maxIterations,int maxBetrag)
         {
@@ -28,7 +18,6 @@ namespace ExchangeLibrary
             YCurr = yCurr;
             YStep = yStep;
             MaxBetrag = maxBetrag;
-            //MaxIterations = MaxIterations;
             MaxIterations = maxIterations;
         }
 

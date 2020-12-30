@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MandlBrot"
         xmlns:converter="clr-namespace:MandlBrot.Converter"        
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="600">
     <!--ContentRendered="Window_ContentRendered">-->
     <Window.DataContext>
         <local:MandelBrotModel>
@@ -20,8 +20,9 @@
     </Window.Resources>
 
     <Grid>
+        
 
-       
+
         <!--<Canvas>
             <Path Stroke="Black" StrokeThickness="4" Data="M 80,200 A 100,50 45 1 0 100,50" />-->
         <Canvas x:Name="PlotArea">

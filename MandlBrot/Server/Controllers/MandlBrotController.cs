@@ -21,17 +21,12 @@ namespace Server.Controllers
         [Route("api/calc")]
         public ActionResult<string> CalcMandlbrot([FromBody] CalculationRequest calculationRequest)  
         {
-            //return Ok(new List<(int, int, int)>());
             double xReminder = -2;
             double yReminder = 1.2;
 
             int maxIterations = 18;
             int maxBetrag = 4;
 
-            //int yPixels = 400;
-            //int xPixels = 400;
-
-            // 0.02
             double step = 0.013;
 
             double parts = 16;
@@ -63,12 +58,6 @@ namespace Server.Controllers
 
                     var data = new StringContent(json, Encoding.UTF8, "application/json");
 
-                    //Task<Task<HttpResponseMessage>> task = Task.Factory.StartNew(async () => { return await client.PostAsync("https://localhost:44364/api/calcpart", data); });
-                    //Func<Task<HttpResponseMessage>> tas = (() => { return client.PostAsync("https://localhost:44364/api/calcpart", data); });
-                    
-                    
-                    /*Task<HttpResponseMessage> task = client.PostAsync("https://localhost:44364/api/calcpart", data);*/
-
                     MandlBrotCalcer calcer = new MandlBrotCalcer();
 
                     List<(int, int, int)> list = calcer.CalcPart(cpr.XMin, cpr.XMax, cpr.YMin, cpr.YMax, cpr.MaxIterations, cpr.MaxBetrag, cpr.XCurr, cpr.YCurr, step);
@@ -91,23 +80,6 @@ namespace Server.Controllers
 
 
 
-
-            /* for (int j = 0; j < tasks.Count; j++)
-             {
-                 //Func<string> f = async () => await tasks.ElementAt(j).Result.Content.ReadAsStringAsync();
-
-                 //var respstr = tasks.ElementAt(j).Result.Content.ReadAsStringAsync();
-
-                 //Task.WaitAll(new[] { respstr });
-
-                // var list = JsonConvert.DeserializeObject<List<(int,int,int)>>(respstr); 
-
-                 //List<(int,int,int)> list = JsonConvert.DeserializeObject<List<(int, int, int)>>(JsonConvert.DeserializeObject<List<(int,int,int)>>(tasks.ElementAt(j).Result.Result.Content));
-
-                 //coordinatedValues.AddRange(list);
-             }*/
-
-            // return Ok(coordinatedValues);
 
             var json1 = JsonConvert.SerializeObject(coordinatedValues);
             return Ok(json1);
