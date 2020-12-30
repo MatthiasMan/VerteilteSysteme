@@ -16,17 +16,17 @@ namespace Ventilator
             Console.ReadLine();
 
             using (var sender = new PushSocket("@tcp://*:80"))
-            using (var sink = new PullSocket(">tcp://localhost:8080"))
             {
                 
                 Console.WriteLine("Sending tasks to workers");
 
                 int step = 10;
-                int height = 200;  //400
+                int height = 200;  //400    hier kann height geändert werden
+                int width = 200;   //       hier kann width geändert werden
                 for (int start = 0; start < height; start += 10)
                 {
                     Thread.Sleep(100);
-                    sender.SendFrame(start + "," + step + "," + 200);
+                    sender.SendFrame(start + "," + step + "," + width);
                     Console.WriteLine("asked for " + start + " to " + step);
                     step = step + 10;
                 }

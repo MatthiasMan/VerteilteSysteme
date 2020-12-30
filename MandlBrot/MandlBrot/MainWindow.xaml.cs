@@ -51,7 +51,7 @@ namespace MandlBrot
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-            using (var receiver = new PullSocket("@tcp://localhost:400"))
+            using (var receiver = new PullSocket("@tcp://*:400"))
             {
 
                 var watch = Stopwatch.StartNew();
